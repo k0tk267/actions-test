@@ -26,7 +26,7 @@ jobs:
         run: |
           BRANCH_NAME=${{ steps.branch_name.outputs.branch }}
           DATE_TIME=${{ steps.datetime.outputs.datetime }}
-          TAG_NAME="${BRANCH_NAME}-${DATE_TIME}"
+          TAG_NAME="${DATE_TIME}-${BRANCH_NAME}"
 
           echo "Creating tag ${TAG_NAME}"
           git tag ${TAG_NAME}
